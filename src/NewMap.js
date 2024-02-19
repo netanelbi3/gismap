@@ -25,6 +25,7 @@ const NewMap = () => {
       const trailheadsLayer = new FeatureLayer({
         url: "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Cities/FeatureServer/0",
         outFields: ["CITY_NAME", "POP"],
+        definitionExpression: "STATUS = 'National and provincial capital'",
       });
 
       // Define a popup template for the layer
